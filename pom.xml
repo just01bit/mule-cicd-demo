@@ -33,6 +33,31 @@
 					<classifier>mule-application</classifier>
 				</configuration>
 			</plugin>
+			
+			<!-- CH Deployment -->
+			<plugin>
+			  <groupId>org.mule.tools.maven</groupId>
+			  <artifactId>mule-maven-plugin</artifactId>
+			  <version>3.7.1</version>
+			  <extensions>true</extensions>
+			  <configuration>
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>${app.runtime}</muleVersion>
+			      <username>timdai-training</username>
+			      <password>Training@2021</password>
+			      <applicationName>mule-cicd-demo-0822</applicationName>
+			      <environment>Sandbox</environment>
+			      <region>ap-southeast-2</region>
+			      <workers>1</workers>
+			      <workerType>MICRO</workerType>
+			      <properties>
+			        <key>value</key>
+			      </properties>
+			    </cloudHubDeployment>
+			  </configuration>
+			</plugin>
+				
 		</plugins>
 	</build>
 
@@ -76,6 +101,11 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
+		
+		  <pluginRepository>
+		    <id>mule-public</id>
+		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		  </pluginRepository>		
 	</pluginRepositories>
 
 </project>
