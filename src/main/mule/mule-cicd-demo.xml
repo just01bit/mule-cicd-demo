@@ -37,7 +37,7 @@ output application/json
 ---
 {
 	Status: "Success",
-	ClientResponse: "Client gets response from Server",
+	ClientResponse: "Client gets response from Server #1",
 	ServerResponse: payload
 }
 ]]></ee:set-payload>
