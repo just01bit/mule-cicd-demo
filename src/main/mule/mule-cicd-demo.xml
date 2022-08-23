@@ -37,7 +37,7 @@ output application/json
 ---
 {
 	Status: "Success",
-	ClientResponse: "Client gets response from Server #1",
+	ClientResponse: "Client gets response from Server - mule cert",
 	ServerResponse: payload
 }
 ]]></ee:set-payload>
